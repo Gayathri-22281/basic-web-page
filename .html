@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gayathri's Web Dev Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f9ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005f99;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    .services ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background-color: #e6e6e6;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Gayathri's Website</h1>
+    <p>Learn HTML, CSS & JavaScript the easy way!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>This is a beginner-friendly web page project created by <strong>Gayathri</strong>. It's perfect for understanding how web development works.</p>
+    <img src="https://via.placeholder.com/800x300" alt="Sample Banner">
+    <button onclick="alertMessage()">Click Me for a Message</button>
+  </section>
+
+  <section id="about">
+    <h2>About This Site</h2>
+    <p>This page demonstrates how to structure a website with semantic HTML tags, apply styling using CSS, and add interactivity with JavaScript.</p>
+    <p>It includes a responsive layout, user interaction, and a contact form.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>What You Will Learn</h2>
+    <ul>
+      <li>Creating webpages with HTML</li>
+      <li>Designing with CSS</li>
+      <li>Adding interactivity using JavaScript</li>
+      <li>Building responsive layouts</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Gayathri</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top: 10px;"><strong>Email:</strong> <a href="mailto:gayathriumapathy22@gmail.com">gayathriumapathy22@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Built by Gayathri | Contact: <a href="mailto:gayathriumapathy22@gmail.com">gayathriumapathy22@gmail.com</a>
+  </footer>
+
+  <script>
+    function alertMessage() {
+      alert("Hi Gayathri! You're doing great with JavaScript!");
+    }
+
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields before submitting.");
+        return false;
+      }
+
+      alert("Thank you, " + name + "! Your message has been received.");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
